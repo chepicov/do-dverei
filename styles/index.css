@@ -1,0 +1,241 @@
+html {
+  font-family: "Roboto Condensed",sans-serif;
+}
+
+body,
+h1,
+h2 {
+  margin: 0;
+}
+
+ul {
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  list-style-type: none;
+}
+
+.header {
+  position: fixed;
+  background: white;
+  top: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  z-index: 100;
+}
+
+.header__body {
+  padding: 10px 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.header__title {
+
+}
+
+.header__subtitle {
+  font-size: 14px;
+}
+
+.header__logo {
+  font-weight: 700;
+  color: red;
+  font-size: 38px;
+}
+
+.header__logo--white {
+  color: black;
+}
+
+.header__hamburger {
+  width: 45px;
+  margin-top: 5px;
+}
+
+.header__hamburger img {
+  width: 100%;
+}
+
+.header__menu {
+  position: fixed;
+  width: 100%;
+  background: black;
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+     -moz-transition: all 0.5s ease-out;
+       -o-transition: all 0.5s ease-out;
+          transition: all 0.5s ease-out;
+}
+
+.header__menu--shown {
+  /* max-height: 80%;
+  height: auto; */
+  max-height: 200px;
+}
+
+.header__menu-list {
+}
+
+.header__menu-item {
+  text-transform: uppercase;
+}
+
+.header__menu-item div {
+  padding: 15px;
+}
+
+.header__menu-item a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.main {
+  padding-top: 100px;
+}
+
+.section {
+  padding: 15px;
+}
+
+.section + .section {
+  border-top: 1px solid #ccc;
+}
+
+.section__title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.carousel {
+  margin: 15px 0;
+}
+
+.carousel-container {
+}
+
+.carousel-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  outline: none;
+  padding: 10px 10px 20px;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item.slick-current {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel-item__image {
+  max-width: 100%;
+}
+
+.carousel-item__name {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.carousel-item__price {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.carousel-item__button {
+  margin-top: 10px;
+  background: black;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 22px;
+  min-width: 160px;
+  outline: none;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
+
+.desc {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.desc--shown {
+  opacity: 1;
+  max-height: inherit;
+  overflow: auto;
+}
+
+.desc__body {
+  padding: 15px;
+}
+
+.desc__title {
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.desc__button {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  background: black;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 22px;
+  min-width: 160px;
+  outline: none;
+}
+
+.desc--shown .desc__button {
+  display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-item {
+    opacity: 0.8;
+    transform: scale(0.95);
+  }
+
+  .carousel {
+    margin: 15px -15px;
+  }
+}
+
+.red {
+  color: red;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="styles/index.css" media="all" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <title>DODVEREI.BY</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__body">
+        <div class="header__title">
+          <h1 class="header__logo">
+            <!-- DO<span class="header__logo--white">DVEREI.BY</span> -->
+            ДО<span class="header__logo--white">ДВЕРЕЙ.BY</span>
+          </h1>
+          <div class="header__subtitle">
+            Телевизоры и бытовая техника<br/> в рассрочку
+          </div>
+        </div>
+        <button class="header__hamburger" onclick="openHamburger()">
+          <img src="assets/menu.svg" alt="Menu" />
+        </button>
+      </div>
+      <nav id="slideDown" class="header__menu">
+        <ul class="header__menu-list">
+          <li class="header__menu-item"><a href="#"><div>Преимущества</div></a></li>
+          <li class="header__menu-item"><a href="#"><div>Хиты продаж</div></a></li>
+          <li class="header__menu-item"><a href="#"><div>Отзывы</div></a></li>
+          <li class="header__menu-item"><a href="#"><div>Контакты</div></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="section">
+        <h2 class="section__title"><span class="red">Хиты</span> продаж телевизоров</h2>
+        <div class="carousel-container">
+          <ul class="carousel">
+            <li class="carousel-item">
+              <img class="carousel-item__image" src="assets/lg.jpg" alt="LG" />
+              <div class="carousel-item__name">
+                LG 33089
+              </div>
+              <div class="carousel-item__price">
+                50 руб./мес.
+              </div>
+              <button class="carousel-item__button" onclick="toggleDesc(1)">
+                Подробнее
+              </button>
+
+              <div class="desc">
+                <div class="desc__body">
+                  <p class="desc__title">LG 33089</p>
+                  <p>Производитель: LG</p>
+                  <p>Диагональ: 33 дюйма</p>
+                </div>
+                <button class="desc__button" onclick="toggleDesc(1)">
+                  Назад
+                </button>
+              </div>
+            </li>
+
+            <li class="carousel-item">
+              <img class="carousel-item__image" src="assets/samsung.jpg" alt="Samsung" />
+              <div class="carousel-item__name">
+                Samsung 33089
+              </div>
+              <div class="carousel-item__price">
+                50 руб./мес.
+              </div>
+              <button class="carousel-item__button" onclick="toggleDesc(2)">
+                Подробнее
+              </button>
+
+              <div class="desc">
+                <div class="desc__body">
+                  <p class="desc__title">LG 33089</p>
+                  <p>Производитель: LG</p>
+                  <p>Диагональ: 33 дюйма</p>
+                </div>
+                <button class="desc__button" onclick="toggleDesc(2)">
+                  Назад
+                </button>
+              </div>
+            </li>
+
+            <li class="carousel-item">
+              <img class="carousel-item__image" src="assets/samsung.jpg" alt="Samsung" />
+              <div class="carousel-item__name">
+                LG 33089
+              </div>
+              <div class="carousel-item__price">
+                50 руб./мес.
+              </div>
+              <button class="carousel-item__button" onclick="toggleDesc(3)">
+                Подробнее
+              </button>
+
+              <div class="desc">
+                <div class="desc__body">
+                  <p class="desc__title">LG 33089</p>
+                  <p>Производитель: LG</p>
+                  <p>Диагональ: 33 дюйма</p>
+                </div>
+                <button class="desc__button" onclick="toggleDesc(3)">
+                  Назад
+                </button>
+              </div>
+            </li>
+
+            <li class="carousel-item">
+              <img class="carousel-item__image" src="assets/samsung.jpg" alt="Samsung" />
+              <div class="carousel-item__name">
+                LG 33089
+              </div>
+              <div class="carousel-item__price">
+                50 руб./мес.
+              </div>
+              <button class="carousel-item__button" onclick="toggleDesc(4)">
+                Подробнее
+              </button>
+
+              <div class="desc">
+                <div class="desc__body">
+                  <p class="desc__title">LG 33089</p>
+                  <p>Производитель: LG</p>
+                  <p>Диагональ: 33 дюйма</p>
+                </div>
+                <button class="desc__button" onclick="toggleDesc(4)">
+                  Назад
+                </button>
+              </div>
+            </li>
+
+            <li class="carousel-item">
+              <img class="carousel-item__image" src="assets/samsung.jpg" alt="Samsung" />
+              <div class="carousel-item__name">
+                LG 33089
+              </div>
+              <div class="carousel-item__price">
+                50 руб./мес.
+              </div>
+              <button class="carousel-item__button" onclick="toggleDesc(5)">
+                Подробнее
+              </button>
+
+              <div class="desc">
+                <div class="desc__body">
+                  <p class="desc__title">LG 33089</p>
+                  <p>Производитель: LG</p>
+                  <p>Диагональ: 33 дюйма</p>
+                </div>
+                <button class="desc__button" onclick="toggleDesc(5)">
+                  Назад
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/slick.js"></script>
+  </body>
+</html>
