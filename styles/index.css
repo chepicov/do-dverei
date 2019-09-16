@@ -4,7 +4,8 @@ html {
 
 body,
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
 }
 
@@ -22,7 +23,7 @@ ul {
   right: 0;
   width: 100%;
   border-bottom: 1px solid #ccc;
-  z-index: 100;
+  z-index: 10;
 }
 
 .header__body {
@@ -38,31 +39,38 @@ ul {
 
 .header__subtitle {
   font-size: 14px;
+  margin-top: -5px;
+}
+
+.header__subtitle-delimeter {
+  display: none;
 }
 
 .header__logo {
   font-weight: 700;
-  color: red;
+  color: #eb3a39;
   font-size: 38px;
 }
 
 .header__logo--white {
-  color: black;
+  color: #2c2c2c;
 }
 
 .header__hamburger {
+  cursor: pointer;
+  border: none;
+  background: url(../assets/menu.svg);
+  background-size: contain;
+  height: 45px;
   width: 45px;
+  outline: none;
   margin-top: 5px;
-}
-
-.header__hamburger img {
-  width: 100%;
 }
 
 .header__menu {
   position: fixed;
   width: 100%;
-  background: black;
+  background: #2c2c2c;
   overflow: hidden;
   max-height: 0;
   -webkit-transition: all 0.5s ease-out;
@@ -93,6 +101,74 @@ ul {
   text-decoration: none;
 }
 
+@keyframes pulse_animation {
+  0% { transform: scale(1); }
+  30% { transform: scale(1); }
+  40% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+  60% { transform: scale(1); }
+  70% { transform: scale(1.05); }
+  80% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+.phone {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background: #eb3a39;
+  padding: 15px;
+  border-radius: 50%;
+  z-index: 2;
+
+  animation-name: pulse_animation;
+  animation-duration: 3000ms;
+  transform-origin: 70% 70%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.form-full {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 100;
+
+  transition: 300ms all ease-in;
+  transform: translate(0, 100vh);
+}
+
+.form-full--on {
+  transform: translate(0, 0);
+}
+
+.form-full--shown {
+  display: block;
+}
+
+.form-full__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #2c2c2c;
+  color: #fff;
+}
+
+.form-full__title {
+  font-size: 22px;
+}
+
+.form-full__close {
+  background: url(../assets/close.svg);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+}
 
 .main {
   padding-top: 100px;
@@ -102,6 +178,16 @@ ul {
   padding: 15px;
 }
 
+.section__subcontainer {
+  padding-top: 10px;
+}
+
+.section__subtitle {
+  font-weight: 400;
+  text-align: center;
+  font-size: 22px;
+}
+
 .section + .section {
   border-top: 1px solid #ccc;
 }
@@ -109,6 +195,29 @@ ul {
 .section__title {
   text-align: center;
   text-transform: uppercase;
+  color: white;
+}
+
+.section__title-container {
+  background: #2c2c2c;
+  padding: 10px;
+  margin: 0 -15px;
+  /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); */
+}
+
+.section__title-line {
+  width: 70%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.section__subdelimeter {
+  margin-top: 40px;
+  width: 70%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #2f2f2f, rgba(0, 0, 0, 0));
 }
 
 .carousel {
@@ -158,7 +267,7 @@ ul {
 
 .carousel-item__button {
   margin-top: 10px;
-  background: black;
+  background: #2c2c2c;
   border: none;
   color: white;
   padding: 10px;
@@ -169,7 +278,7 @@ ul {
 
 .slick-prev:before,
 .slick-next:before {
-  color: black !important;
+  color: #2c2c2c !important;
 }
 
 .desc {
@@ -212,7 +321,7 @@ ul {
   display: none;
   position: absolute;
   bottom: 20px;
-  background: black;
+  background: #2c2c2c;
   border: none;
   color: white;
   padding: 10px;
@@ -234,8 +343,12 @@ ul {
   .carousel {
     margin: 15px -15px;
   }
+
+  .header__subtitle-delimeter {
+    display: block;
+  }
 }
 
 .red {
-  color: red;
+  color: #eb3a39;
 }

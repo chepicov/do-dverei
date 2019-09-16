@@ -15,152 +15,296 @@
       <div class="header__body">
         <div class="header__title">
           <h1 class="header__logo">
-            <!-- DO<span class="header__logo--white">DVEREI.BY</span> -->
-            ДО<span class="header__logo--white">ДВЕРЕЙ.BY</span>
+            DO<span class="header__logo--white">DVEREI.BY</span>
           </h1>
           <div class="header__subtitle">
-            Телевизоры и бытовая техника<br/> в рассрочку
+            Телевизоры и бытовая техника<br class="header__subtitle-delimeter"/> в рассрочку
           </div>
         </div>
-        <button class="header__hamburger" onclick="openHamburger()">
-          <img src="assets/menu.svg" alt="Menu" />
-        </button>
+        <button class="header__hamburger" onclick="openHamburger()"></button>
       </div>
       <nav id="slideDown" class="header__menu">
         <ul class="header__menu-list">
           <li class="header__menu-item"><a href="#"><div>Преимущества</div></a></li>
-          <li class="header__menu-item"><a href="#"><div>Хиты продаж</div></a></li>
+          <li class="header__menu-item"><a href="#hits"><div>Хиты продаж</div></a></li>
           <li class="header__menu-item"><a href="#"><div>Отзывы</div></a></li>
           <li class="header__menu-item"><a href="#"><div>Контакты</div></a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="main">
+    <div class="phone" onclick="openForm()">
+      <img class="phone__icon" src="assets/telephone.svg">
+    </div>
+
+    <div class="form-full" id="form-full">
+      <header class="form-full__header">
+        <div class="form-full__title">Мы Вам перезвоним</div>
+        <div class="form-full__close" onclick="openForm(1)" />
+      </header>
+      <form>
+
+      </form>
+    </div>
+
+    <main class="main" id="hits">
       <section class="section">
-        <h2 class="section__title"><span class="red">Хиты</span> продаж телевизоров</h2>
-        <div class="carousel-container">
-          <ul class="carousel">
-            <li class="carousel-item">
-              <img class="carousel-item__image" src="assets/lg.jpg" alt="LG" />
-              <div class="carousel-item__name">
-                LG 33089
-              </div>
-              <div class="carousel-item__price">
-                50 руб./мес.
-              </div>
-              <button class="carousel-item__button" onclick="toggleDesc(1)">
-                Подробнее
-              </button>
-
-              <div class="desc">
-                <div class="desc__body">
-                  <p class="desc__title">LG 33089</p>
-                  <p>Производитель: LG</p>
-                  <p>Диагональ: 33 дюйма</p>
+        <div class="section__title-container">
+          <h2 class="section__title">Хиты продаж</h2>
+          <!-- <hr class="section__title-line" /> -->
+        </div>
+        <div class="section__subcontainer">
+          <h3 class="section__subtitle">Телевизоры</h3>
+          <div class="carousel-container">
+            <ul class="carousel">
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/lg.jpg" alt="LG" />
+                <div class="carousel-item__name">
+                  LG 33089
                 </div>
-                <button class="desc__button" onclick="toggleDesc(1)">
-                  Назад
-                </button>
-              </div>
-            </li>
-
-            <li class="carousel-item">
-              <img class="carousel-item__image" src="assets/samsung.jpg" alt="Samsung" />
-              <div class="carousel-item__name">
-                Samsung 33089
-              </div>
-              <div class="carousel-item__price">
-                50 руб./мес.
-              </div>
-              <button class="carousel-item__button" onclick="toggleDesc(2)">
-                Подробнее
-              </button>
-
-              <div class="desc">
-                <div class="desc__body">
-                  <p class="desc__title">LG 33089</p>
-                  <p>Производитель: LG</p>
-                  <p>Диагональ: 33 дюйма</p>
+                <div class="carousel-item__price">
+                  50 руб./мес.
                 </div>
-                <button class="desc__button" onclick="toggleDesc(2)">
-                  Назад
+                <button class="carousel-item__button" onclick="toggleDesc('tv')(1)">
+                  Подробнее
                 </button>
-              </div>
-            </li>
 
-            <li class="carousel-item">
-              <img class="carousel-item__image" src="assets/samsung.jpg" alt="Samsung" />
-              <div class="carousel-item__name">
-                LG 33089
-              </div>
-              <div class="carousel-item__price">
-                50 руб./мес.
-              </div>
-              <button class="carousel-item__button" onclick="toggleDesc(3)">
-                Подробнее
-              </button>
-
-              <div class="desc">
-                <div class="desc__body">
-                  <p class="desc__title">LG 33089</p>
-                  <p>Производитель: LG</p>
-                  <p>Диагональ: 33 дюйма</p>
+                <div class="tv desc">
+                  <div class="desc__body">
+                    <p class="desc__title">LG 33089</p>
+                    <p>Производитель: LG</p>
+                    <p>Диагональ: 33 дюйма</p>
+                  </div>
+                  <button class="desc__button" onclick="toggleDesc('tv')(1)">
+                    Назад
+                  </button>
                 </div>
-                <button class="desc__button" onclick="toggleDesc(3)">
-                  Назад
-                </button>
-              </div>
-            </li>
+              </li>
 
-            <li class="carousel-item">
-              <img class="carousel-item__image" src="assets/samsung.jpg" alt="Samsung" />
-              <div class="carousel-item__name">
-                LG 33089
-              </div>
-              <div class="carousel-item__price">
-                50 руб./мес.
-              </div>
-              <button class="carousel-item__button" onclick="toggleDesc(4)">
-                Подробнее
-              </button>
-
-              <div class="desc">
-                <div class="desc__body">
-                  <p class="desc__title">LG 33089</p>
-                  <p>Производитель: LG</p>
-                  <p>Диагональ: 33 дюйма</p>
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/samsung.jpg" alt="Samsung" />
+                <div class="carousel-item__name">
+                  Samsung 33089
                 </div>
-                <button class="desc__button" onclick="toggleDesc(4)">
-                  Назад
-                </button>
-              </div>
-            </li>
-
-            <li class="carousel-item">
-              <img class="carousel-item__image" src="assets/samsung.jpg" alt="Samsung" />
-              <div class="carousel-item__name">
-                LG 33089
-              </div>
-              <div class="carousel-item__price">
-                50 руб./мес.
-              </div>
-              <button class="carousel-item__button" onclick="toggleDesc(5)">
-                Подробнее
-              </button>
-
-              <div class="desc">
-                <div class="desc__body">
-                  <p class="desc__title">LG 33089</p>
-                  <p>Производитель: LG</p>
-                  <p>Диагональ: 33 дюйма</p>
+                <div class="carousel-item__price">
+                  50 руб./мес.
                 </div>
-                <button class="desc__button" onclick="toggleDesc(5)">
-                  Назад
+                <button class="carousel-item__button" onclick="toggleDesc('tv')(2)">
+                  Подробнее
                 </button>
-              </div>
-            </li>
-          </ul>
+
+                <div class="tv desc">
+                  <div class="desc__body">
+                    <p class="desc__title">LG 33089</p>
+                    <p>Производитель: LG</p>
+                    <p>Диагональ: 33 дюйма</p>
+                  </div>
+                  <button class="desc__button" onclick="toggleDesc('tv')(2)">
+                    Назад
+                  </button>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/samsung.jpg" alt="Samsung" />
+                <div class="carousel-item__name">
+                  LG 33089
+                </div>
+                <div class="carousel-item__price">
+                  50 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc('tv')(3)">
+                  Подробнее
+                </button>
+
+                <div class="tv desc">
+                  <div class="desc__body">
+                    <p class="desc__title">LG 33089</p>
+                    <p>Производитель: LG</p>
+                    <p>Диагональ: 33 дюйма</p>
+                  </div>
+                  <button class="desc__button" onclick="toggleDesc('tv')(3)">
+                    Назад
+                  </button>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/samsung.jpg" alt="Samsung" />
+                <div class="carousel-item__name">
+                  LG 33089
+                </div>
+                <div class="carousel-item__price">
+                  50 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc('tv')(4)">
+                  Подробнее
+                </button>
+
+                <div class="tv desc">
+                  <div class="desc__body">
+                    <p class="desc__title">LG 33089</p>
+                    <p>Производитель: LG</p>
+                    <p>Диагональ: 33 дюйма</p>
+                  </div>
+                  <button class="desc__button" onclick="toggleDesc('tv')(4)">
+                    Назад
+                  </button>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/samsung.jpg" alt="Samsung" />
+                <div class="carousel-item__name">
+                  LG 33089
+                </div>
+                <div class="carousel-item__price">
+                  50 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc('tv')(5)">
+                  Подробнее
+                </button>
+
+                <div class="tv desc">
+                  <div class="desc__body">
+                    <p class="desc__title">LG 33089</p>
+                    <p>Производитель: LG</p>
+                    <p>Диагональ: 33 дюйма</p>
+                  </div>
+                  <button class="desc__button" onclick="toggleDesc('tv')(5)">
+                    Назад
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="section__subdelimeter" />
+        <div class="section__subcontainer">
+          <h3 class="section__subtitle">Бытовая техника</h3>
+          <div class="carousel-container">
+            <ul class="carousel">
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/holodos.jpg" alt="Холодильник" />
+                <div class="carousel-item__name">
+                  LG 33089
+                </div>
+                <div class="carousel-item__price">
+                  50 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc('tech')(1)">
+                  Подробнее
+                </button>
+
+                <div class="tech desc">
+                  <div class="desc__body">
+                    <p class="desc__title">LG 33089</p>
+                    <p>Производитель: LG</p>
+                    <p>Диагональ: 33 дюйма</p>
+                  </div>
+                  <button class="desc__button" onclick="toggleDesc('tech')(1)">
+                    Назад
+                  </button>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/holodos.jpg" alt="Холодильник" />
+                <div class="carousel-item__name">
+                  Samsung 33089
+                </div>
+                <div class="carousel-item__price">
+                  50 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc('tech')(2)">
+                  Подробнее
+                </button>
+
+                <div class="tech desc">
+                  <div class="desc__body">
+                    <p class="desc__title">LG 33089</p>
+                    <p>Производитель: LG</p>
+                    <p>Диагональ: 33 дюйма</p>
+                  </div>
+                  <button class="desc__button" onclick="toggleDesc('tech')(2)">
+                    Назад
+                  </button>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/holodos.jpg" alt="Холодильник" />
+                <div class="carousel-item__name">
+                  LG 33089
+                </div>
+                <div class="carousel-item__price">
+                  50 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc('tech')(3)">
+                  Подробнее
+                </button>
+
+                <div class="tech desc">
+                  <div class="desc__body">
+                    <p class="desc__title">LG 33089</p>
+                    <p>Производитель: LG</p>
+                    <p>Диагональ: 33 дюйма</p>
+                  </div>
+                  <button class="desc__button" onclick="toggleDesc('tech')(3)">
+                    Назад
+                  </button>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/holodos.jpg" alt="Холодильник" />
+                <div class="carousel-item__name">
+                  LG 33089
+                </div>
+                <div class="carousel-item__price">
+                  50 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc('tech')(4)">
+                  Подробнее
+                </button>
+
+                <div class="tech desc">
+                  <div class="desc__body">
+                    <p class="desc__title">LG 33089</p>
+                    <p>Производитель: LG</p>
+                    <p>Диагональ: 33 дюйма</p>
+                  </div>
+                  <button class="desc__button" onclick="toggleDesc('tech')(4)">
+                    Назад
+                  </button>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/holodos.jpg" alt="Холодильник" />
+                <div class="carousel-item__name">
+                  LG 33089
+                </div>
+                <div class="carousel-item__price">
+                  50 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc('tech')(5)">
+                  Подробнее
+                </button>
+
+                <div class="tech desc">
+                  <div class="desc__body">
+                    <p class="desc__title">LG 33089</p>
+                    <p>Производитель: LG</p>
+                    <p>Диагональ: 33 дюйма</p>
+                  </div>
+                  <button class="desc__button" onclick="toggleDesc('tech')(5)">
+                    Назад
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
