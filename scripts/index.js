@@ -2,23 +2,28 @@ const openHamburger = (e) => {
   document.getElementById('slideDown').classList.toggle('header__menu--shown');
 }
 
-const openForm = (id) => {
-  if (id) {
-    document.getElementById('form-full').classList.toggle('form-full--on');
+const openForm = (close, formId) => {
+  const id = formId || 'form-full';
+  if (close) {
+    document.getElementById(id).classList.toggle('form-full--on');
     setTimeout(() => {
-      document.getElementById('form-full').classList.toggle('form-full--shown');
+      document.getElementById(id).classList.toggle('form-full--shown');
     }, 300);
   } else {
-    document.getElementById('form-full').classList.toggle('form-full--shown');
+    document.getElementById(id).classList.toggle('form-full--shown');
     setTimeout(() => {
-      document.getElementById('form-full').classList.toggle('form-full--on');
+      document.getElementById(id).classList.toggle('form-full--on');
     }, 100);
   }
 }
 
-const toggleDesc = (group) => (id) => {
-  document.getElementsByClassName(`${group} desc`)[id - 1].classList.toggle('desc--shown');
+const toggleDesc = (el) => {
+  el.parentNode.getElementsByClassName('desc')[0].classList.toggle('desc--shown');
 }
+
+// const toggleDesc = (group) => (id) => {
+//   document.getElementsByClassName(`${group} desc`)[id - 1].classList.toggle('desc--shown');
+// }
 
 let prevScrollpos = window.pageYOffset;
 window.addEventListener('scroll', () => {
@@ -36,4 +41,18 @@ window.addEventListener('load', AOS.refresh)
 
 const scrollMain = () => {
   document.getElementById('hits').scrollIntoView({ behavior: 'smooth' });
+}
+
+const validate = el => {
+  if (el.name.value == '') {
+    alert('Введите Ваше Имя!');
+    return false;
+  } if (el.phone.value == '') {
+    alert('Введите Ваш номер телефона!');
+    return false;
+  } if (el.phone.value.replace(/\D+/g, '').length < 11) {
+    alert('Номер телефона некорректен!');
+    return false;
+  }
+  return true;
 }

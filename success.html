@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="styles/index.css" media="all" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <title>DODVEREI.BY</title>
+  </head>
+  <body>
+    <header
+      id="header"
+      class="header header--shown"
+    >
+      <div class="header__container">
+        <div class="header__body">
+          <div class="header__title">
+            <h1 class="header__logo">
+              DO<span class="header__logo--black">DVEREI.BY</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="success">
+        <img class="success__image" src="assets/icons/success.svg" alt="Успешно" />
+        <div class="success__title">
+          Заявка успешно отправлена
+        </div>
+        <div class="success__text">
+          <div>Проверьте правильность введенных данных</div>
+          <div>
+            Имя: <span id="name"></span>
+          </div>
+          <div>
+            Телефон: <span id="phone"></span>
+          </div>
+        </div>
+        <div class="success__link">
+          <a href="/">Вернуться на сайт</a>
+        </div>
+      </section>
+      <section class="section section--footer footer" id="contact">
+        <a href="tel:+375336232691" class="footer__phone">+375 (33) 623-26-91</a>
+        <div class="footer__icons">
+          <a target="_blank" href="viber://chat?number=+375336232691" class="footer__icon footer__icon--viber"><div></div></a>
+          <a target="_blank" href="tg://resolve?domain="  class="footer__icon footer__icon--telegram"></a>
+          <a target="_blank" href="https://www.instagram.com/dodverei/" class="footer__icon footer__icon--instagram"></a>
+        </div>
+        <div class="footer__auth">Время работы: 09:00 - 18:00</div>
+        <div class="footer__auth">DoDverei.by © 2019</div>
+      </section>
+    </main>
+  </body>
+  <script type="text/javascript" src="scripts/success.js"></script>
+</html>

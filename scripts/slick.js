@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $('.carousel.carousel--tv').slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     arrows: false,
     centerPadding: '60px',
     adaptiveHeight: true,
@@ -28,7 +28,7 @@ $(document).ready(function(){
   });
   $('.carousel.carousel--tech').slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     arrows: false,
     centerPadding: '60px',
     adaptiveHeight: true,
@@ -54,7 +54,7 @@ $(document).ready(function(){
   });
   $('.carousel.carousel--review').slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     arrows: false,
     autoplay: true,
     centerPadding: '60px',
