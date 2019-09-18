@@ -25,9 +25,15 @@ window.addEventListener('scroll', () => {
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById('header').classList.add('header--shown');
-  } else if (prevScrollpos + 30 < currentScrollPos) {
+  } else if (prevScrollpos + 10 < currentScrollPos) {
     document.getElementById('header').classList.remove('header--shown');
     document.getElementById('slideDown').classList.remove('header__menu--shown');
   }
   prevScrollpos = currentScrollPos;
 });
+
+window.addEventListener('load', AOS.refresh)
+
+const scrollMain = () => {
+  document.getElementById('hits').scrollIntoView({ behavior: 'smooth' });
+}

@@ -185,7 +185,7 @@ ul {
 }
 
 .chevron {
-  margin: 70px auto 30px;
+  margin: 40px auto 8vh;
   display: block;
   color: #0099ff;
   -webkit-animation: pulse 2s infinite;
@@ -458,7 +458,7 @@ ul {
   border: 1px solid #c0c0c0;
   color: #0099ff;
   padding: 10px;
-  font-size: 16px;
+  font-size: 20px;
   max-width: 160px;
   width: 100%;
   outline: none;
@@ -513,7 +513,7 @@ ul {
   border: 1px solid #c0c0c0;
   color: #0099ff;
   padding: 10px;
-  font-size: 16px;
+  font-size: 20px;
   max-width: 160px;
   width: 100%;
   outline: none;
