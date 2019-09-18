@@ -80,7 +80,7 @@ ul {
 .header__hamburger {
   cursor: pointer;
   border: none;
-  background: url(../assets/menu.svg);
+  background: url(../assets/icons/menu.svg);
   background-size: contain;
   height: 35px;
   width: 35px;
@@ -244,7 +244,7 @@ ul {
 }
 
 .form-full__close {
-  background: url(../assets/close.svg);
+  background: url(../assets/icons/close.svg);
   background-size: contain;
   width: 30px;
   height: 30px;
@@ -566,11 +566,11 @@ ul {
 }
 
 .footer__icon--viber {
-  background: url(../assets/viber.svg);
+  background: url(../assets/icons/viber.svg);
 }
 
 .footer__icon--telegram {
-  background: url(../assets/telegram.svg);
+  background: url(../assets/icons/telegram.svg);
 }
 
 .footer__phone {
