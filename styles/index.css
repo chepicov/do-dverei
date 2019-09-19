@@ -54,8 +54,9 @@ ul {
   justify-content: space-between;
 }
 
-.header__title {
-
+.header__title-link {
+  text-decoration: none;
+  outline: none;
 }
 
 .header__subtitle {
