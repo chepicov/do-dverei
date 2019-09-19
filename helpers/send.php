@@ -3,7 +3,7 @@
 
 	if(isset($_POST['name'])) {
 		
-		$email = "chepicov.mark@mail.ru"; #Email, на него придут письма
+		$email = "vrassrochky.by@gmail.com"; #Email, на него придут письма
 		$title = "DODVEREI.BY"; #Заголовок письма
 
 		$text = "
