@@ -6,11 +6,24 @@
 		$email = "vrassrochky.by@gmail.com"; #Email, на него придут письма
 		$title = "DODVEREI.BY"; #Заголовок письма
 
+		switch ($_POST['form-id']) {
+			case "widget":
+				$source = "Обратный звонок";
+				break;
+			case "form-catalog":
+				$source = "Получить каталог";
+				break;
+			default:
+				$source = "Оформить рассрочку";
+				break;
+		}
+
 		$text = "
 		Информация о покупателе:
 
 		Имя: ".$_POST['name']."
 		Телефон: ".$_POST['phone']."
+		Форма: ".$source."
 		Время заказа: ".date("Y-m-d H:i:s");
 
 		if(mail($email, $title, $text)) {

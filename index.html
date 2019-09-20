@@ -96,27 +96,29 @@
         <div class="form-full__subheader">
           Оставьте заявку и мы перезвоним<br /> Вам в течение 5 минут
         </div>
-        <form class="form" method="post" onsubmit="return validate(this)" action="helpers/send.php">
+        <form id="widget" class="form" method="post" onsubmit="return validate(this)" action="helpers/send.php">
           <input class="form__input" type="text" name="name" placeholder="Имя" required />
           <input class="form__input" type="tel" name="phone" placeholder="Телефон" required />
+          <input class="form__input--hidden" type="hidden" name="form-id" value="" />
           <button class="form__button" type="submit">Оставить заявку</button>
         </form>
         <div class="form-full__subheader">Время работы: 09:00 - 18:00</div>
       </div>
     </div>
 
-    <div class="form-full" id="form-catalog">
+    <div class="form-full" id="modal-catalog">
       <header class="form-full__header">
         <div class="form-full__title">Подобрать технику</div>
-        <div class="form-full__close" onclick="openForm(1, 'form-catalog')"></div>
+        <div class="form-full__close" onclick="openForm(1, 'modal-catalog')"></div>
       </header>
       <div class="form-full__form">
         <div class="form-full__subheader">
           Специалист поможет с выбором техники по Вашим критериям и отправит предложенные варианты в мессенджер
         </div>
-        <form class="form" method="post" onsubmit="return validate(this)" action="helpers/send.php">
+        <form id="form-catalog" class="form" method="post" onsubmit="return validate(this)" action="helpers/send.php">
           <input class="form__input" type="text" name="name" placeholder="Имя" required />
           <input class="form__input" type="tel" name="phone" placeholder="Телефон" required />
+          <input class="form__input--hidden" type="hidden" name="form-id" value="" />
           <button class="form__button" type="submit">Отправить</button>
         </form>
       </div>
@@ -192,7 +194,7 @@
               data-aos-offset="0"
               data-aos-delay="1800"
             >
-              Без банков и переплат
+              Без банков и скрытых платежей
             </div>
           </div>
           <div class="main-screen__checkbox">
@@ -619,7 +621,7 @@
           <div class="section__text section__text--center">
             Получите полный каталог и консультацию специалиста
           </div>
-          <button class="catalog__button" onclick="openForm(0, 'form-catalog')">
+          <button class="catalog__button" onclick="openForm(0, 'modal-catalog')">
             Получить
           </button>
         </div>
@@ -733,9 +735,10 @@
         <div class="section__text">
           Оставьте заявку и наш специалист перезвонит Вам в течение 5 минут
         </div>
-        <form id="form" class="form" method="POST" onsubmit="return validate(this)" action="helpers/send.php">
+        <form id="main-form" class="form" method="POST" onsubmit="return validate(this)" action="helpers/send.php">
           <input class="form__input" type="text" name="name" placeholder="Имя" required />
           <input class="form__input" type="tel" name="phone" placeholder="Телефон" required />
+          <input class="form__input--hidden" type="hidden" name="form-id" value="" />
           <button class="form__button" type="submit">Оставить заявку</button>
         </form>
       </section>
@@ -743,7 +746,7 @@
         <a href="tel:+375336232691" class="footer__phone">+375 (33) 623-26-91</a>
         <div class="footer__icons">
           <a href="viber://chat?number=+375336232691" class="footer__icon footer__icon--viber"><div></div></a>
-          <a href="tg://resolve?domain="  class="footer__icon footer__icon--telegram"></a>
+          <a href="tg://resolve?domain=dodverei"  class="footer__icon footer__icon--telegram"></a>
           <a href="https://www.instagram.com/dodverei/"  class="footer__icon footer__icon--instagram"></a>
         </div>
         <div class="footer__auth">Время работы: 09:00 - 18:00</div>

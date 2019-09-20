@@ -21,10 +21,6 @@ const toggleDesc = (el) => {
   el.parentNode.getElementsByClassName('desc')[0].classList.toggle('desc--shown');
 }
 
-// const toggleDesc = (group) => (id) => {
-//   document.getElementsByClassName(`${group} desc`)[id - 1].classList.toggle('desc--shown');
-// }
-
 let prevScrollpos = window.pageYOffset;
 window.addEventListener('scroll', () => {
   let currentScrollPos = window.pageYOffset;
@@ -44,6 +40,8 @@ const scrollMain = () => {
 }
 
 const validate = el => {
+  const formId = el.id;
+  el.getElementsByClassName('form__input--hidden')[0].value = formId;
   if (el.name.value == '') {
     alert('Введите Ваше Имя!');
     return false;
