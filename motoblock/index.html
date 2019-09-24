@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Мотоблоки в рассрочку. Доставка по всей Беларуси бесплатно. Без банков и скрытых платежей.">
+    <meta name="yandex-verification" content="77d181c5779479d5" />
+    <link rel="stylesheet" type="text/css" href="styles/index.css" media="all" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon-16x16.png">
+    <link rel="shortcut icon" sizes="32x32" type="image/x-icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <title>Мотоблок До Дверей | Мотоблоки в рассрочку</title>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '508937126528405');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=508937126528405&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+      ym(55407229, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+      });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/55407229" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </head>
+  <body>
+    <header
+      id="header"
+      class="header header--shown"
+    >
+      <div class="header__container">
+        <div class="header__body">
+          <div class="header__title">
+            <a class="header__title-link" href="/">
+              <h1 class="header__logo">
+                DO<span class="header__logo--black">DVEREI</span>
+              </h1>
+            </a>
+          </div>
+          <button class="header__hamburger" onclick="openHamburger()"></button>
+        </div>
+        <nav id="slideDown" class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item"><a href="#"><div>О нас</div></a></li>
+            <li class="header__menu-item"><a href="#hits"><div>Хиты продаж</div></a></li>
+            <li class="header__menu-item"><a href="#catalog"><div>Каталог</div></a></li>
+            <li class="header__menu-item"><a href="#reviews"><div>Отзывы</div></a></li>
+            <li class="header__menu-item"><a href="#howwework"><div>Как мы работаем</div></a></li>
+            <li class="header__menu-item"><a href="#payment"><div>Условия рассрочки</div></a></li>
+            <li class="header__menu-item"><a href="#contact"><div>Контакты</div></a></li>            
+          </ul>
+        </nav>
+        <a href="tel:+375336232691" class="header__phone">+375 (33) 623-26-91</a>
+      </div>
+    </header>
+
+    <div
+      class="phone"
+      onclick="openForm()"
+      data-aos="fade-up"
+      data-aos-delay="3000"
+      data-aos-offset="0"
+    >
+      <img class="phone__icon" src="assets/icons/telephone.svg">
+    </div>
+
+    <div id="modal-background" class="form-background"></div>
+    <div class="form-full" id="form-full">
+      <header class="form-full__header">
+        <div class="form-full__title">Заказать звонок</div>
+        <div class="form-full__close" onclick="openForm(1)"></div>
+      </header>
+      <div class="form-full__form">
+        <div class="form-full__subheader">
+          Оставьте заявку и мы перезвоним<br /> Вам в течение 5 минут
+        </div>
+        <form id="widget" class="form" method="post" onsubmit="return validate(this)" action="helpers/send.php">
+          <input class="form__input" type="text" name="name" placeholder="Имя" required />
+          <input class="form__input" type="tel" name="phone" placeholder="Телефон" required />
+          <input class="form__input--hidden" type="hidden" name="form-id" value="" />
+          <button class="form__button" type="submit">Оставить заявку</button>
+        </form>
+        <div class="form-full__subheader">Время работы: 09:00 - 18:00</div>
+      </div>
+    </div>
+
+    <div class="form-full" id="modal-catalog">
+      <header class="form-full__header">
+        <div class="form-full__title">Подобрать технику</div>
+        <div class="form-full__close" onclick="openForm(1, 'modal-catalog')"></div>
+      </header>
+      <div class="form-full__form">
+        <div class="form-full__subheader">
+          Специалист поможет с выбором техники по Вашим критериям и отправит предложенные варианты в мессенджер
+        </div>
+        <form id="form-catalog" class="form" method="post" onsubmit="return validate(this)" action="helpers/send.php">
+          <input class="form__input" type="text" name="name" placeholder="Имя" required />
+          <input class="form__input" type="tel" name="phone" placeholder="Телефон" required />
+          <input class="form__input--hidden" type="hidden" name="form-id" value="" />
+          <button class="form__button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <main class="main">
+      <section class="section main-screen">
+        <div class="main-screen__wrapper">
+          <img class="main-screen__image" src="assets/images/1.jpg" alt="Мотоблок" />
+          <div class="main-screen__desc">
+            <div class="main-screen__header">
+              <div
+                class="main-screen__title"
+                data-aos="fade-right"
+                data-aos-once="true"
+                data-aos-offset="0"
+              >
+                Мотоблоки в рассрочку
+              </div>
+            </div>
+            <div class="main-screen__list">
+              <div class="main-screen__checkbox">
+                <div
+                  class="main-screen__checkbox-icon"
+                  data-aos="fade-right"
+                  data-aos-delay="600"
+                  data-aos-once="true"
+                  data-aos-offset="0"
+                >
+                  <img src="assets/icons/main/shopping-cart.svg" alt="Check" />
+                </div>
+                <div
+                  class="main-screen__checkbox-label"
+                  data-aos="fade-left"
+                  data-aos-once="true"
+                  data-aos-offset="0"
+                  data-aos-delay="600"
+                >
+                  Более 10 000 моделей техники <br />в наличии
+                </div>
+              </div>
+              <div class="main-screen__checkbox">
+                <div
+                  class="main-screen__checkbox-icon"
+                  data-aos="fade-right"
+                  data-aos-delay="1200"
+                  data-aos-once="true"
+                  data-aos-offset="0"
+                >
+                  <img src="assets/icons/main/support1.svg" alt="Check" />
+                </div>
+                <div
+                  class="main-screen__checkbox-label"
+                  data-aos="fade-left"
+                  data-aos-once="true"
+                  data-aos-offset="0"
+                  data-aos-delay="1200"
+                >
+                  Собственный центр рассрочки
+                </div>
+              </div>
+              <div class="main-screen__checkbox">
+                <div
+                  class="main-screen__checkbox-icon"
+                  data-aos="fade-right"
+                  data-aos-delay="1800"
+                  data-aos-once="true"
+                  data-aos-offset="0"
+                >
+                  <img src="assets/icons/main/percent.svg" alt="Check" />
+                </div>
+                <div
+                  class="main-screen__checkbox-label"
+                  data-aos="fade-left"
+                  data-aos-once="true"
+                  data-aos-offset="0"
+                  data-aos-delay="1800"
+                >
+                  Без банков и скрытых платежей
+                </div>
+              </div>
+              <div class="main-screen__checkbox">
+                <div
+                  class="main-screen__checkbox-icon"
+                  data-aos="fade-right"
+                  data-aos-delay="2400"
+                  data-aos-once="true"
+                  data-aos-offset="0"
+                >
+                  <img src="assets/icons/main/clock.svg" alt="Check" />
+                </div>
+                <div
+                  class="main-screen__checkbox-label"
+                  data-aos="fade-left"
+                  data-aos-once="true"
+                  data-aos-offset="0"
+                  data-aos-delay="2400"
+                >
+                  Дистанционное оформление <br />за 15 минут
+                </div>
+              </div>
+              <div class="main-screen__checkbox">
+                <div
+                  class="main-screen__checkbox-icon"
+                  data-aos="fade-right"
+                  data-aos-once="true"
+                  data-aos-offset="0"
+                  data-aos-delay="3000"
+                >
+                  <img src="assets/icons/main/delivery-truck.svg" alt="Check" />
+                </div>
+                <div
+                  class="main-screen__checkbox-label"
+                  data-aos="fade-left"
+                  data-aos-offset="0"
+                  data-aos-delay="3000"
+                  data-aos-once="true"
+                >
+                  Бесплатная доставка до дверей в любую точку РБ
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-screen__empty"></div>
+        <i
+          onclick="scrollMain()"
+          class="chevron"
+          data-aos="fade-up"
+          data-aos-delay="3000"
+          data-aos-offset="0"
+        ></i>
+      </section>
+      <section class="section" id="hits">
+        <div
+          class="section__title-container"
+          data-aos="fade-right"
+          data-aos-once="true"
+          data-aos-offset="0"
+        >
+          <h2 class="section__title">Хиты продаж</h2>
+          <!-- <hr class="section__title-line" /> -->
+        </div>
+        <div class="section__subcontainer">
+          <h3 class="section__subtitle">SKIPER</h3>
+          <div class="carousel-container">
+            <ul class="carousel carousel--tv">
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="LG" />
+                <div class="carousel-item__name">
+                  LG 49UK6200PLA
+                </div>
+                <div class="carousel-item__price">
+                  от 82 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tv desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">LG 49UK6200PLA</p>
+                    <p>Диагональ: 49 дюймов;</p>
+                    <p>Разрешение экрана: Ultra HD 4K-3840x2160;</p>
+                    <p>Wi-Fi: есть;</p>
+                    <p>Smart TV: есть;</p>
+                    <p>Гарантия: 1 год;</p>
+                    <p>Страна производства: Россия;</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="Samsung" />
+                <div class="carousel-item__name">
+                  POLARLINE 32PL13TC-SM
+                </div>
+                <div class="carousel-item__price">
+                  от 39 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tv desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">POLARLINE 32PL13TC-SM</p>
+                    <p>Диагональ: 32 дюйма;</p>
+                    <p>Разрешение экрана: HD-1366x768;</p>
+                    <p>Wi-Fi: есть;</p>
+                    <p>Smart TV: есть;</p>
+                    <p>Гарантия: 1 год;</p>
+                    <p>Страна производства: Россия;</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="Samsung" />
+                <div class="carousel-item__name">
+                  KIVI 55UR50GR
+                </div>
+                <div class="carousel-item__price">
+                  от 85 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tv desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">KIVI 55UR50GR</p>
+                    <p>Диагональ: 55 дюймов;</p>
+                    <p>Разрешение экрана: Ultra HD 4K-3840x2160;</p>
+                    <p>Wi-Fi: есть;</p>
+                    <p>Smart TV: есть;</p>
+                    <p>Гарантия: 1 год;</p>
+                    <p>Голосовое управление: есть;</p>
+                    <p>Страна производства: Россия;</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="Samsung" />
+                <div class="carousel-item__name">
+                  LG 43UK6200PLA
+                </div>
+                <div class="carousel-item__price">
+                  от 73 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tv desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">LG 43UK6200PLA</p>
+                    <p>Диагональ: 43 дюйма;</p>
+                    <p>Разрешение экрана: Ultra HD 4K-3840x2160;</p>
+                    <p>Wi-Fi: есть;</p>
+                    <p>Smart TV: есть;</p>
+                    <p>Гарантия: 1 год;</p>
+                    <p>Страна производства: Россия;</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="Samsung" />
+                <div class="carousel-item__name">
+                  SAMSUNG UE32N5000AUXRU
+                </div>
+                <div class="carousel-item__price">
+                  от 57 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tv desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">SAMSUNG UE32N5000AUXRU</p>
+                    <p>Диагональ: 32 дюйма;</p>
+                    <p>Разрешение экрана: Full HD-1920x1080;</p>
+                    <p>Wi-Fi: встроенный;</p>
+                    <p>Smart TV: есть;</p>
+                    <p>Гарантия: 1 год;</p>
+                    <p>Страна производства: Россия;</p>
+                  </div>
+                </div>
+              </li>
+
+               <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="Samsung" />
+                <div class="carousel-item__name">
+                  SAMSUNG UE43NU7400UXRU
+                </div>
+                <div class="carousel-item__price">
+                  от 85 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tv desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">SAMSUNG UE43NU7400UXRU</p>
+                    <p>Диагональ: 43 дюйма;</p>
+                    <p>Разрешение экрана: Ultra HD 4K-3840x2160;</p>
+                    <p>Wi-Fi: есть;</p>
+                    <p>Smart TV: есть;</p>
+                    <p>Гарантия: 1 год;</p>
+                    <p>Страна производства: Россия;</p>
+                  </div>
+                </div>
+              </li>
+
+               <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="Samsung" />
+                <div class="carousel-item__name">
+                  SAMSUNG UE55NU8000UXRU
+                </div>
+                <div class="carousel-item__price">
+                  от 136 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tv desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">SAMSUNG UE55NU8000UXRU</p>
+                    <p>Диагональ: 55 дюймов;</p>
+                    <p>Разрешение экрана: Ultra HD 4K-3840x2160;</p>
+                    <p>Wi-Fi: есть;</p>
+                    <p>Smart TV: есть;</p>
+                    <p>Гарантия: 1 год;</p>
+                    <p>Голосовое управление: есть;</p>
+                    <p>Страна производства: Россия;</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="section__subdelimeter" />
+        <div class="section__subcontainer">
+          <h3 class="section__subtitle">BRADO</h3>
+          <div class="carousel-container">
+            <ul class="carousel carousel--tech">
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="Холодильник" />
+                <div class="carousel-item__name">
+                  ATLANT ХМ-4421-080-N
+                </div>
+                <div class="carousel-item__price">
+                  от 68 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tech desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">ATLANT ХМ-4421-080-N</p>
+                     <p>Тип: холодильник с морозильником;</p>
+                    <p>Высота, ширина, глубина: 186.5 x 59.5 x 62.5;</p>
+                    <p>Размораживание морозильной камеры: No Frost;</p>
+                    <p>Объем морозильной камеры: 82 л;</p>
+                    <p>Количество ящиков: 3;</p>
+                    <p>Гарантия: 2 года;</p>
+                    <p>Страна производства: Беларусь;</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="Холодильник" />
+                <div class="carousel-item__name">
+                  INDESIT BWSE 61051 BY
+                </div>
+                <div class="carousel-item__price">
+                  от 48 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tech desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">INDESIT BWSE 61051 BY</p>
+                    <p>Тип загрузки: Фронтальная;</p>
+                    <p>Вес загрузки белья: 6 кг;</p>
+                    <p>Количество программ стирки: 16;</p>
+                    <p>Максимальная скорость отжима:  1000 об./мин;</p>
+                    <p>Высота, ширина, глубина: 85 x 59 x 42.5;</p>
+                    <p>Гарантия: 2 года;</p>
+                    <p>Страна производства: Россия;</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="Холодильник" />
+                <div class="carousel-item__name">
+                  GEFEST ПГ 5300-03 0046
+                </div>
+                <div class="carousel-item__price">
+                  59 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tech desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">GEFEST ПГ 5300-03 0046</p>
+                    <p>Количество конфорок: 4;</p>
+                    <p>Материал поверхности: Эмалированная сталь;</p>
+                    <p>Объем духовки: 52 л;</p>
+                    <p>Тип духовки: Газовая;</p>
+                    <p>Высота, ширина, глубина: 85 x 50 x 58.5;</p>
+                    <p>Гарантия: 2 года;</p>
+                    <p>Страна производства: Беларусь;</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="Холодильник" />
+                <div class="carousel-item__name">
+                  Холодильник LG GA-B459BLGL
+                </div>
+                <div class="carousel-item__price">
+                  от 90 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tech desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">Холодильник LG GA-B459BLGL</p>
+                    <p>Тип: холодильник с морозильником;</p>
+                    <p>Высота, ширина, глубина: 186 x 59.5 x 73.7;</p>
+                    <p>Размораживание морозильной камеры: Total No Frost;</p>
+                    <p>Объем морозильной камеры: 107 л;</p>
+                    <p>Количество ящиков: 3;</p>
+                    <p>Гарантия: 3 года;</p>
+                    <p>Страна производства: Россия;</p>
+                  </div>
+                </div>
+              </li>
+
+               <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="Холодильник" />
+                <div class="carousel-item__name">
+                  LG F2J5HS6W
+                </div>
+                <div class="carousel-item__price">
+                  от 48 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tech desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">LG F2J5HS6W</p>
+                    <p>Тип загрузки: Фронтальная;</p>
+                    <p>Вес загрузки белья: 7 кг;</p>
+                    <p>Количество программ стирки: 14;</p>
+                    <p>Максимальная скорость отжима:  1200 об./мин;</p>
+                    <p>Высота, ширина, глубина: 85 x 60 x 45;</p>
+                    <p>Гарантия: 2 года;</p>
+                    <p>Страна производства: Россия;</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="carousel-item">
+                <img class="carousel-item__image" src="assets/images/1.jpg" alt="Холодильник" />
+                <div class="carousel-item__name">
+                  SAMSUNG RB33J3420SA/WT
+                </div>
+                <div class="carousel-item__price">
+                  от 90 руб./мес.
+                </div>
+                <button class="carousel-item__button" onclick="toggleDesc(this)">
+                  Подробнее
+                </button>
+
+                <div class="tech desc" onclick="toggleDesc(this)">
+                  <div class="desc__close"></div>
+                  <div class="desc__body">
+                    <p class="desc__title">SAMSUNG RB33J3420SA/WT</p>
+                    <p>Тип: холодильник с морозильником;</p>
+                    <p>Высота, ширина, глубина: 185 x 59.5 x 66.8;</p>
+                    <p>Размораживание морозильной камеры: Total No Frost;</p>
+                    <p>Объем морозильной камеры: 107 л;</p>
+                    <p>Дисплей: сенсорный;</p>
+                    <p>Количество ящиков: 3;</p>
+                    <p>Гарантия: 3 года;</p>
+                    <p>Страна производства: Польша;</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog" id="catalog">
+          <div class="section__text section__text--center">
+            Получите полный каталог и консультацию специалиста
+          </div>
+          <button class="catalog__button" onclick="openForm(0, 'modal-catalog')">
+            Получить
+          </button>
+        </div>
+      </section>
+      <section class="section" id="reviews">
+        <div
+          class="section__title-container"
+          data-aos="fade-right"
+          data-aos-delay="0"
+          data-aos-offset="0"
+          data-aos-once="true"
+        >
+          <h2 class="section__title">Отзывы</h2>
+        </div>
+        
+        <div class="carousel-container">
+          <ul class="carousel carousel--review">
+            <li class="carousel-item">
+              <img class="carousel-item__image" src="assets/images/review1.jpg" alt="LG" />
+            </li>
+
+            <li class="carousel-item">
+              <img class="carousel-item__image" src="assets/images/review3.jpg" alt="Samsung" />
+            </li>
+
+            <li class="carousel-item">
+              <img class="carousel-item__image" src="assets/images/review2.jpg" alt="Samsung" />
+            </li>
+
+            <li class="carousel-item">
+              <img class="carousel-item__image" src="assets/images/review4.jpg" alt="Samsung" />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section" id="howwework">
+        <div
+          class="section__title-container"
+          data-aos="fade-right"
+          data-aos-offset="0"
+          data-aos-once="true"
+        >
+          <h2 class="section__title">Как мы работаем</h2>
+        </div>
+        <ul class="section__list">
+          <li class="item">
+            <img class="item__icon" src="assets/icons/support.svg" alt="Заявка" />
+            <div class="item__title">
+              Оставляете заявку
+            </div>
+          </li>
+          <li class="item">
+            <img class="item__icon" src="assets/icons/loupe.svg" alt="Выбор" />
+            <div class="item__title">
+              Специалист помогает с выбором техники
+            </div>
+          </li>
+          <li class="item">
+            <img class="item__icon" src="assets/icons/insurance.svg" alt="Договор" />
+            <div class="item__title">
+              Оформляем рассрочку за 15 мин
+            </div>
+          </li>
+          <li class="item">
+            <img class="item__icon" src="assets/icons/shipped.svg" alt="Доставка" />
+            <div class="item__title">
+              Доставляем бесплатно
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="section" id="payment">
+        <div
+          class="section__title-container section__title-container--long"
+          data-aos="fade-right"
+          data-aos-once="true"
+          data-aos-offset="0"
+        >
+          <h2 class="section__title">Условия рассрочки</h2>
+        </div>
+        <ul class="section__list">
+          <li class="item item--small">
+            <img class="item__icon" src="assets/icons/check.svg" alt="Заявка" />
+            <div class="item__title">
+              До 24 месяцев
+            </div>
+          </li>
+          <li class="item item--small">
+            <img class="item__icon" src="assets/icons/check.svg" alt="Выбор" />
+            <div class="item__title">
+              Без первого платежа
+            </div>
+          </li>
+          <li class="item item--small">
+            <img class="item__icon" src="assets/icons/check.svg" alt="Договор" />
+            <div class="item__title">
+              Подписание договора<br /> при получении
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="section" id="order">
+        <div
+          class="section__title-container section__title-container--long"
+          data-aos="fade-right"
+          data-aos-once="true"
+          data-aos-offset="0"
+        >
+          <h2 class="section__title">Оформить рассрочку</h2>
+        </div>
+        <div class="section__text">
+          Оставьте заявку и наш специалист перезвонит Вам в течение 5 минут
+        </div>
+        <form id="main-form" class="form" method="POST" onsubmit="return validate(this)" action="helpers/send.php">
+          <input class="form__input" type="text" name="name" placeholder="Имя" required />
+          <input class="form__input" type="tel" name="phone" placeholder="Телефон" required />
+          <input class="form__input--hidden" type="hidden" name="form-id" value="" />
+          <button class="form__button" type="submit">Оставить заявку</button>
+        </form>
+      </section>
+      <section class="section section--footer footer" id="contact">
+        <a href="tel:+375336232691" class="footer__phone">+375 (33) 623-26-91</a>
+        <div class="footer__icons">
+          <a href="viber://chat?number=+375336232691" class="footer__icon footer__icon--viber"><div></div></a>
+          <a href="tg://resolve?domain=dodverei"  class="footer__icon footer__icon--telegram"></a>
+          <a href="https://www.instagram.com/dodverei/"  class="footer__icon footer__icon--instagram"></a>
+        </div>
+        <div class="footer__auth">Время работы: 09:00 - 18:00</div>
+        <div class="footer__auth">DoDverei.by © 2019</div>
+      </section>
+    </main>
+    <script>
+      AOS.init();
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/slick.js"></script>
+  </body>
+</html>
