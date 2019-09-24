@@ -345,6 +345,10 @@ ul {
   max-width: 100%;
 }
 
+.main-screen__checkbox-icon--flip img {
+  transform: scale(-1, 1);
+}
+
 .main-screen__checkbox-label {
   margin-left: 20px;
 }
@@ -848,6 +852,16 @@ ul {
     overflow: auto;
     display: block;
     padding-top: 50px;
+  }
+
+  .carousel--moto {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .carousel--moto .carousel-item {
+    max-width: 32%;
+    min-width: 200px;
   }
 }
 
