@@ -4,6 +4,9 @@ const openHamburger = (e) => {
 
 const openForm = (close, formId) => {
   const id = formId || 'form-full';
+  if (formId === 'modal-catalog') {
+    ym(55472470, 'reachGoal', 'modal-catalog');
+  } 
   document.getElementById('modal-background').classList.toggle('form-background--open');
   document.getElementById(id).classList.toggle('form-full--shown');
 }

@@ -410,6 +410,11 @@ ul {
   margin-top: 15px;
 }
 
+.section__text--large {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
 .section__text--center {
   text-align: center;
 }
@@ -582,7 +587,7 @@ ul {
   display: block;
 }
 
-.red {
+.blue {
   color: #0099ff;
 }
 

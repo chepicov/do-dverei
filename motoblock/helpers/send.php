@@ -24,9 +24,10 @@
 		Имя: ".$_POST['name']."
 		Телефон: ".$_POST['phone']."
 		Форма: ".$source."
+		Сайт: motoblok.dodverei.by
 		Время заказа: ".date("Y-m-d H:i:s");
 
-		if(mail($email, $title, $text)) {
+		if(mail($email, $title, $text, "From: motoblok@$SERVER_NAME")) {
 			header("Location: /success.html?name=".$_POST['name']."&phone=".$_POST['phone']);
 		} else {
 			echo "Ошибка. Возможно функция mail отключена. Обратитесь к хостинг-провайдеру или возьмите консультацию на сайте, где купили шаблон";
