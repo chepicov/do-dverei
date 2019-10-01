@@ -45,24 +45,12 @@ $(document).ready(function(){
     adaptiveHeight: true,
     slidesToShow: 3,
     autoplay: true,
-    autoplaySpeed: 4000,
     responsive: [
-      {
-        breakpoint: 2048,
-        settings: 'unslick',
-      },
-      {
-        breakpoint: 900,
-        settings: {
-          centerPadding: '60px',
-          slidesToShow: 3,
-        },
-      },
       {
         breakpoint: 768,
         settings: {
           centerPadding: '40px',
-          slidesToShow: 1,
+          slidesToShow: 3,
         }
       },
       {

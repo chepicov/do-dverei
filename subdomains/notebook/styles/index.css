@@ -881,14 +881,12 @@ ul {
     padding-top: 50px;
   }
 
-  .carousel--tv,
-  .carousel--tech {
+  .carousel--tv {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .carousel--tv .carousel-item,
-  .carousel--tech .carousel-item {
+  .carousel--tv .carousel-item {
     max-width: 32%;
     min-width: 200px;
   }

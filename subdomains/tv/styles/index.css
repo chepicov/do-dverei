@@ -746,7 +746,7 @@ ul {
   }
 
   .main-screen__image {
-    width: 100%;
+    width: 90%;
   }
 
   .main-screen__image-wrapper {
@@ -755,6 +755,7 @@ ul {
     max-width: 50%;
     margin-left: 15px;
     align-items: center;
+    justify-content: center;
   }
 
   .main-screen__wrapper {
@@ -881,14 +882,12 @@ ul {
     padding-top: 50px;
   }
 
-  .carousel--tv,
-  .carousel--tech {
+  .carousel--tv {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .carousel--tv .carousel-item,
-  .carousel--tech .carousel-item {
+  .carousel--tv .carousel-item {
     max-width: 32%;
     min-width: 200px;
   }
