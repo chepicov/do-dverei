@@ -24,8 +24,7 @@
 		Имя: ".$_POST['name']."
 		Телефон: ".$_POST['phone']."
 		Форма: ".$source."
-		Сайт: fridge.dodverei.by
-		Категория: Бытовая техника
+		Категория: Ноутбуки
 		Время заказа: ".date("Y-m-d H:i:s");
 
 		if(mail($email, $title, $text, "From: dodverei@$SERVER_NAME")) {

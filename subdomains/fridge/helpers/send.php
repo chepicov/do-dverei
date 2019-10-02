@@ -24,7 +24,6 @@
 		Имя: ".$_POST['name']."
 		Телефон: ".$_POST['phone']."
 		Форма: ".$source."
-		Сайт: fridge.dodverei.by
 		Категория: Бытовая техника
 		Время заказа: ".date("Y-m-d H:i:s");
 
