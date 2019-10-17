@@ -43,7 +43,10 @@ const scrollMain = () => {
 
 const validate = el => {
   const formId = el.id;
+  const link = window.location.href;
+  const utm = link.indexOf('?') > -1 ? link.split('?').slice(-1)[0] : '';
   el.getElementsByClassName('form__input--hidden')[0].value = formId;
+  el.getElementsByClassName('form__input--hidden')[1].value = utm;
   if (el.name.value == '') {
     alert('Введите Ваше Имя!');
     return false;

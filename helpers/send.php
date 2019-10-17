@@ -1,5 +1,5 @@
 <?php
-	header("Content-Type: text/html; charset=utf-8");
+	header("Content-Type: text/plain; charset=utf-8");
 
 	if(isset($_POST['name'])) {
 		
@@ -18,16 +18,21 @@
 				break;
 		}
 
+		$headers .= "Reply-To: DoDverei <dodvereiby@$SERVER_NAME>\r\n";
+		$headers .= "Return-Path: DoDverei <dodvereiby@$SERVER_NAME>\r\n";
+		$headers .= "From: DoDverei <dodvereiby@$SERVER_NAME>\r\n";
+
 		$text = "
 		Информация о покупателе:
 
 		Имя: ".$_POST['name']."
 		Телефон: ".$_POST['phone']."
 		Форма: ".$source."
+		UTM: ".$_POST['utm']."
 		Категория: Телевизоры и бытовая техника
 		Время заказа: ".date("Y-m-d H:i:s");
 
-		if(mail($email, $title, $text, "From: dodverei@$SERVER_NAME")) {
+		if(mail($email, $title, $text)) {
 			header("Location: /success.html?name=".$_POST['name']."&phone=".$_POST['phone']);
 		} else {
 			echo "Ошибка. Возможно функция mail отключена. Обратитесь к хостинг-провайдеру или возьмите консультацию на сайте, где купили шаблон";

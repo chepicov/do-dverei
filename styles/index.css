@@ -716,12 +716,13 @@ ul {
   text-align: center;
 }
 
-.success__link a {
+.success__link button {
   text-decoration: none;
   text-transform: uppercase;
   color: #0099ff;
   border: 1px solid #0099ff;
   padding: 15px;
+  font-size: 18px;
 }
 
 .success__user {
