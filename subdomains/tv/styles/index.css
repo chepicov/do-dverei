@@ -385,7 +385,8 @@ ul {
 .section__subtitle {
   font-weight: 400;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .section + .section {
@@ -735,6 +736,10 @@ ul {
 
 .desktop-only {
   display: none;
+}
+
+.small {
+  text-transform: lowercase;
 }
 
 
